@@ -23,3 +23,4 @@ case .Puzzle(let price, let pieces):
     print("World Puzzle is a puzzle with \(pieces) and sells for \(price)")
 }
 
+

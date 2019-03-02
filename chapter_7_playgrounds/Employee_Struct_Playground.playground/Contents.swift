@@ -1,6 +1,6 @@
 import Cocoa
 
-class EmployeeClass {
+struct EmployeeStruct {
     var firstName = ""
     var lastName = ""
     var salaryYear: Double = 0.0 {
@@ -47,25 +47,19 @@ class EmployeeClass {
         return firstName + " " + lastName
     }
     
-    func giveRaise(amount: Double) {
+    mutating func giveRase(amount: Double) {
         self.salaryYear += amount
     }
-    
     
 }
 
 
-var f = EmployeeClass()
-f.firstName = "Jon"
-f.lastName = "Hoffman"
-f.salaryYear = 39_000
+
+var f = EmployeeStruct(firstName: "Jon", lastName: "Hoffman", salaryYear: 39_000)
 print(f.salaryWeek) //prints 750.00 to the console
 f.salaryWeek = 1000
 print(f.salaryWeek) //prints 1000.00 to the console
 print(f.salaryYear) //prints 52000.00 to the console
 print(f.getFullName())
-f.giveRaise(amount: 10000.00)
+f.giveRase(amount: 10000.00)
 print(f.salaryYear)
-
-
-
