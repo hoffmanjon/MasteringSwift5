@@ -81,3 +81,38 @@ case .Jupiter, .Saturn, .Uranus, .Neptune:
 @unknown default:
     print("Unknown planet")
 }
+
+
+let myDog = ("Maple", 4)
+
+switch myDog {
+case ("Lily", let age):
+    print("Lily is my dog and is \(age)")
+case ("Maple", let age):
+    print("Maple is my dog and is \(age)")
+case ("Dash", let age):
+    print("Dash is my dog and is \(age)")
+default:
+    print("unknown dog")
+}
+
+switch myDog {
+case(_, 0...1):
+    print("Your dog is a puppy")
+case(_, 2...7):
+    print("Your dog is middle aged")
+case(_, 8...):
+    print("Your dog is getting old")
+default:
+    print("Unknown")
+}
+
+let myNumber = 10
+switch myNumber {
+case _ where myNumber.isMultiple(of: 2):
+    print("Divisible by 2")
+case _ where myNumber.isMultiple(of: 3):
+    print("Divisible by 3")
+default:
+    print("No Match")
+}

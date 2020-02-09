@@ -16,7 +16,7 @@ struct DispatchAfter {
         let queue2 = DispatchQueue(label: "squeue.hoffman.jon")
         
         let delayInSeconds = 2.0
-        let pTime = DispatchTime.now() + Double(Int64(delayInSeconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        let pTime = DispatchTime.now() + Double(delayInSeconds * Double(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)
         queue2.asyncAfter(deadline: pTime) {
             print("Times Up")
         }
